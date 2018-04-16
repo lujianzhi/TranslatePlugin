@@ -1,0 +1,48 @@
+<idea-plugin>
+    <!--唯一的Id-->
+    <id>com.ian.plugin.translate</id>
+    <!--插件的名称-->
+    <name>Translate</name>
+    <!--插件版本-->
+    <version>1.0</version>
+    <!--联系方式-->
+    <vendor email="jianzhi.lu@beibei.com" url="http://www.beibei.com/">BeiBei</vendor>
+
+    <!--对插件进行的描述-->
+    <description><![CDATA[
+      对英文进行翻译
+    ]]></description>
+
+    <!--插件变更日志-->
+    <change-notes><![CDATA[
+      1.0 翻译功能
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0" />
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <!--对应的actions-->
+    <actions>
+        <!-- Add your actions here -->
+        <!--id:action的ID class:action所在类路径 text:工具栏中显示的名称 description:描述-->
+        <action id="TranslateActionID" class="action.TranslateAction" text="TranslateAction"
+            description="TranslateAction">
+            <!--选择在工具栏的哪个菜单组下显示，以及显示规则-->
+            <add-to-group group-id="ToolsMenu" anchor="first" />
+            <!--快捷键-->
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl M" />
+        </action>
+    </actions>
+
+</idea-plugin>
